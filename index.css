@@ -1,0 +1,63 @@
+
+#first,#last{
+    display: inline-block;
+}
+#last{
+    margin-left: 15%;
+}
+#row_1{
+align-items: center;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  tr:nth-child(odd) {background-color: #f2f2f2;}
+
+  .rate {
+    float: left;
+    height: 32px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.star_below{
+    position: static;
+    padding:20px;
+    width:100%;
+    margin-right: 95%;
+    float: left;
+    text-align: left;
+}
+.table_info{
+    position: relative;
+}
